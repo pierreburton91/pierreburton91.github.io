@@ -1,0 +1,9 @@
+# humanstxt.org/
+# The humans responsible & technology colophon
+
+# TEAM
+
+    Pierre -- Design/Developer -- @pierreburton91# TECHNOLOGY COLOPHON
+
+    CSS3, HTML5
+    Node.js, Apache Server Configs, jQuery, Modernizr, Normalize.css
