@@ -1,2 +1,4 @@
-# pierreburton91.github.io
-Personnal page
+# Pierre Burton's page
+### Presentation / Business Card website
+
+Nothing too important to see here.
