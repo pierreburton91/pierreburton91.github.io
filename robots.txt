@@ -4,4 +4,4 @@
  User-agent: *
  Disallow:
  /codes/
-Sitemap: http://www.mon-domaine.fr/sitemap.xml
+Sitemap: http://www.pierre-burton.be/sitemap.xml
