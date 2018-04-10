@@ -5,6 +5,7 @@
   "main": "index.html",
   "scripts": {
     "start": "gulp start",
+    "build": "gulp build",
     "test": "test"
   },
   "repository": {
@@ -33,6 +34,7 @@
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^5.0.0",
     "gulp-clean-css": "^3.9.3",
+    "gulp-concat": "^2.6.1",
     "gulp-html-extend": "^1.1.6",
     "gulp-imagemin": "^4.1.0",
     "gulp-rename": "^1.2.2",
