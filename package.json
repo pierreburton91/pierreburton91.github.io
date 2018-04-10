@@ -1,0 +1,40 @@
+{
+  "name": "pierreburton91.github.io",
+  "version": "1.0.0",
+  "description": "Static showcase website",
+  "main": "index.html",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pierreburton91/pierreburton91.github.io.git"
+  },
+  "keywords": [
+    "Pierre",
+    "Burton",
+    "Business",
+    "Digital",
+    "Designer",
+    "Developper",
+    "Showcase",
+    "Website"
+  ],
+  "author": "Pierre Burton",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/pierreburton91/pierreburton91.github.io/issues"
+  },
+  "homepage": "https://github.com/pierreburton91/pierreburton91.github.io#readme",
+  "dependencies": {
+    "browser-sync": "^2.23.6",
+    "critical": "^1.2.2",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^5.0.0",
+    "gulp-clean-css": "^3.9.3",
+    "gulp-html-extend": "^1.1.6",
+    "gulp-imagemin": "^4.1.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-uglify": "^3.0.0"
+  }
+}
