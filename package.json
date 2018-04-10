@@ -4,6 +4,7 @@
   "description": "Static showcase website",
   "main": "index.html",
   "scripts": {
+    "start": "gulp start",
     "test": "test"
   },
   "repository": {

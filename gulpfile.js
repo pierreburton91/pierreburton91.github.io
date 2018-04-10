@@ -8,14 +8,14 @@ var uglify = require('gulp-uglify');
 var critical = require('critical');
 var browserSync = require('browser-sync');
 
-// Tâche "css" = LESS + autoprefixer + minify
+// Tâche "css" = autoprefixer + minify
 gulp.task('css', function() {
     return gulp.src('/dev/styles/*.css')
       .pipe(autoprefixer())
       .pipe(rename({
         suffix: '.min'
       }))
-      .pipe(minify())
+      .pipe(cleanCSS())
       .pipe(gulp.dest('./css/'));
 });
 
