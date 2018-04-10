@@ -40,7 +40,7 @@ gulp.task('img', function () {
 
 // Tâche "html" = includes HTML
 gulp.task('html', function() {
-    return  gulp.src('dev/html/*.html')
+    return  gulp.src('dev/html/index.html')
       // Generates HTML includes
       .pipe(htmlExtend({
         annotations: false,
