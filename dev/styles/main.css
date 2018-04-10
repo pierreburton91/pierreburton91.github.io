@@ -97,23 +97,13 @@ textarea {
 
 /*
 Colors
-#556270 - 85,98,112  Grey
-#4ECDC4 - 78,205,196  Blue
-#C7F464 - 199,244,100  Lime
-#FF6B6B - 255,107,107  Pink
-#C44D58 - 196,77,88  Red
+
 */
 
 html {
     min-height: 100%;
 }
 body {
-    float: left;
-    height: 100%;
-    width: 100%;
-    font-family: 'Work Sans', sans-serif;
-    font-weight: 400;
-    animation: bg-gradient 30s linear infinite;
     cursor: default;
     -webkit-tap-highlight-color: transparent;
 }
@@ -121,7 +111,6 @@ body {
     background: #556270;
     color: white; 
 }
-
 ::-moz-selection {
     background: #556270;
     color: white; 
@@ -132,199 +121,7 @@ img::selection {
 img::-moz-selection {
     background: transparent; 
 }
-.background {
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#f2f2f2+50,ffffff+100&1+50,0+100 */
-    background: -moz-linear-gradient(-45deg,  rgba(242,242,242,1) 50%, rgba(255,255,255,0) 100%); /* FF3.6-15 */
-    background: -webkit-linear-gradient(-45deg,  rgba(242,242,242,1) 50%,rgba(255,255,255,0) 100%); /* Chrome10-25,Safari5.1-6 */
-    background: linear-gradient(135deg,  rgba(242,242,242,1) 50%,rgba(255,255,255,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f2f2f2', endColorstr='#00ffffff',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
 
-}
-.logo {
-    position: relative;
-    float: left;
-    width: 60px;
-    height: 60px;
-    margin: 2em 4em;
-    -webkit-animation-delay: 0.3s;
-    animation-delay: 0.3s;
-}
-.logo g {
-    animation: fill-colors 30s linear infinite;
-}
-.content {
-    position: relative;
-    float: left;
-    width: 60%;
-    box-sizing: border-box;
-    padding: 0 4em;
-    margin-top: 8em;
-    clear: both;
-}
-h1 {
-    font-size: 4em;
-    margin: 0;
-    text-transform: uppercase;
-    font-weight: 400;
-    letter-spacing: 0.1em;
-    -webkit-animation-delay: 0.3s;
-    animation-delay: 0.3s;
-}
-h2 {
-    font-size: 2.4em;
-    margin: 0;
-    font-weight: 400;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-    -webkit-animation-delay: 0.6s;
-    animation-delay: 0.6s;
-}
-p {
-    font-size: 1.8em;
-    letter-spacing: 0.05em;
-    font-weight: 300;
-    color: #666666;
-    -webkit-animation-delay: 0.9s;
-    animation-delay: 0.9s;
-}
-h6 {
-    font-size: 0.8em;
-    font-weight: 400;
-    font-style: italic;
-    float: left;
-    clear: both;
-    color: #999999;
-    -webkit-animation-delay: 1.5s;
-    animation-delay: 1.5s;
-}
-h6 i {
-    opacity: 0;
-    padding-left: 20px;
-    transition: all 0.2s ease-out;
-}
-footer {
-    float: left;
-    margin: 2em 4em;
-    clear: both;
-}
-footer ul {
-    display: block;
-    float: left;
-    margin: 0;
-    padding: 0;
-    -webkit-animation-delay: 1.2s;
-    animation-delay: 1.2s;
-}
-footer ul li {
-    display: block;
-    list-style: none;
-    float: left;
-    margin-right: 4em;
-    width: 24px;
-    height: 24px;
-}
-footer ul li:nth-last-child(1) {
-    margin-right: 0;
-}
-a {
-    color: inherit;
-    font-size: 1.5em;
-    text-decoration: none;
-    transition: all 0.2s ease-out;
-}
-a:hover, a:focus, a:active {
-    outline: 0;
-}
-a.text-link {
-    font-size: inherit;
-    border-bottom: 1px dotted #999999;
-}
-a.text-link:hover, a.text-link:focus {
-    color: #ea4c89;
-    border-bottom: transparent;
-}
-a.text-link:hover + i, a.text-link:focus + i {
-    opacity: 1;
-    padding-left: 10px;
-    color: #ea4c89;
-}
-a[title=Behance]:hover, a[title=Behance]:focus {
-    color: #1769ff;
-}
-a[title=Github]:hover, a[title=Github]:focus {
-    color: #6e5494;
-}
-a[title=Twitter]:hover, a[title=Twitter]:focus {
-    color: #1da1f2;
-}
-a[title=LinkedIn]:hover, a[title=LinkedIn]:focus {
-    color: #0077b5;
-}
-a[title=Mail]:hover, a[title=Mail]:focus {
-    color: #dd4b39;
-}
-
-/*
-Colors
-#556270 - 85,98,112  Grey
-#4ECDC4 - 78,205,196  Blue
-#C7F464 - 199,244,100  Lime
-#FF6B6B - 255,107,107  Pink
-#C44D58 - 196,77,88  Red
-*/
-@keyframes fill-colors {
-  0% {
-    fill: #000000;
-  }
-  16.6% {
-    fill: #556270;
-  }
-  33.3% {
-    fill: #4ECDC4;
-  }
-  50% {
-    fill: #C7F464;
-  }
-  66.6% {
-    fill: #FF6B6B;
-  }
-  83.3% {
-    fill: #C44D58;
-  }
-  100% {
-    fill: #000000;
-  }
-}
-@keyframes bg-gradient {
-  0% {
-    background-color: #f2f2f2;
-  }
-  16.6% {
-    background-color: #556270;
-  }
-  33.3% {
-    background-color: #4ECDC4;
-  }
-  50% {
-    background-color: #C7F464;
-  }
-  66.6% {
-    background-color: #FF6B6B;
-  }
-  83.3% {
-    background-color: #C44D58;
-  }
-  100% {
-    background-color: #f2f2f2;
-  }
-}
 
 
 
@@ -411,59 +208,19 @@ Colors
    ========================================================================== */
 
 @media only screen and (max-width: 1024px) {
-    .content {
-        margin-top: 6em;
-    }
-    h1 {
-        font-size: 3em;
-    }
-    h2 {
-        font-size: 1.4em;
-    }
-    p {
-        font-size: 1em;
-    }
-    a {
-        font-size: 1.4em;
-    }
+
 }
 @media only screen and (max-width: 768px) {
-    .content {
-        width: 100%;
-    }
+
 }
 @media only screen and (max-width: 425px) {
-    .logo, footer {
-        margin: 2em;
-    }
-    .content {
-        padding: 0 2em;
-    }
-    h1 {
-        font-size: 2em;
-    }
-    h2 {
-        font-size: 1em;
-    }
-    footer ul li {
-        margin-right: 2em;
-    }
+
 }
 @media only screen and (max-width: 375px) {
-    .content {
-        margin-top: 2em;
-    }
+
 }
 @media only screen and (max-width: 320px) {
-    .logo, footer {
-        margin: 1em;
-    }
-    .content {
-       padding: 0 1em;
-    }
-    h1 {
-        letter-spacing: 2px;
-    }
+
 }
 
 @media print,

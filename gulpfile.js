@@ -67,7 +67,7 @@ gulp.task('watch', function () {
     gulp.watch('dev/styles/*.css', ['css']);
     gulp.watch('dev/scripts/*.js', ['js']);
     gulp.watch('dev/html/*.html', ['html']);
-    gulp.watch('dev/scripts/*.{png,jpg,jpeg,gif,svg}', ['img']);
+    gulp.watch('dev/images/*.{png,jpg,jpeg,gif,svg}', ['img']);
  });
 
 // Static server
