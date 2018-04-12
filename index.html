@@ -100,12 +100,20 @@
 <h1 class="molot">Pierre Burton</h1>
 <div class="hero">
     <h2>DIGITAL DESIGNER</h2>
-    <button>Contacter</button>
+    <button onclick="scrollToContact()">Contacter</button>
 </div>
 <span class="mouse"></span>
+<div class="particles-wrapper">
+    <div class="particle particle-1"></div>
+    <div class="particle particle-2"></div>
+    <div class="particle particle-3"></div>
+    <div class="particle particle-4"></div>
+  </div>
+
     </header>
 
     <section id="services" class="view">
+
 <div class="wrapper services">
     <div class="service-item">
         <figure>
@@ -140,9 +148,10 @@
     <div class="service-description">
         <p>Je design et développe la solution la plus adaptée à vos besoins sur le web ou dans le monde digital en général.
             <br>N'hésitez pas à me contacter pour plus d'informations.</p>
-        <button>Contacter</button>
+        <button onclick="scrollToContact()">Ca m'intéresse !</button>
     </div>
 </div>
+<div class="services-background"></div>
     </section>
 
     <section id="profile" class="view">
@@ -184,7 +193,7 @@
             canapé avec
             <a href="https://www.instagram.com/_ginger.pops_/" target="blank" title="Clarice">ma chère et tendre</a> (et le chien... et le chat..).</p>
     </span>
-    <div class="scroller">
+    <div class="scroller" onclick="scrollToContact()">
         <span>Me contacter</span>
         <span class="arrow"></span>
     </div>
@@ -196,10 +205,12 @@
     <h3>Contact</h3>
     <em>Un projet ? Une question ? Une délicate attention ?</em>
     <p>Remplissez le formulaire suivant, je tâcherai de répondre à votre message dans les plus brefs délais !</p>
-    <form action="" method="">
-        <input type="text" name="nom" placeholder="Votre nom" />
-        <input type="email" name="email" placeholder="Votre email" />
-        <textarea name="message" placeholder="Votre message..."></textarea>
+    <form action="https://formspree.io/pierre.burton91@gmail.com" method="POST">
+        <input type="text" name="name" placeholder="Votre nom" required/>
+        <input type="email" name="_replyto" placeholder="Votre email" required/>
+        <textarea name="message" placeholder="Votre message..." required></textarea>
+        <input type="hidden" name="_gotcha" />
+        <input type="hidden" name="_subject" value="Prise de contact via pierre-burton.be" />
         <input type="submit" value="Envoyer" />
     </form>
 </div>
