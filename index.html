@@ -97,10 +97,10 @@
 <body>
     
     <header class="view">
-<h1 class="molot">Pierre Burton</h1>
 <div class="hero">
+    <h1 class="molot">Pierre Burton</h1>
     <h2>DIGITAL DESIGNER</h2>
-    <button onclick="scrollToContact()">Contacter</button>
+    <button class="scrollTo" dest="#contact">Contacter</button>
 </div>
 <span class="mouse"></span>
 <div class="particles-wrapper">
@@ -113,8 +113,7 @@
     </header>
 
     <section id="services" class="view">
-
-<div class="wrapper services">
+<div class="wrapper services no-mobile">
     <div class="service-item">
         <figure>
             <img src="img/spotlight.svg" alt="spotlight" />
@@ -148,8 +147,47 @@
     <div class="service-description">
         <p>Je design et développe la solution la plus adaptée à vos besoins sur le web ou dans le monde digital en général.
             <br>N'hésitez pas à me contacter pour plus d'informations.</p>
-        <button onclick="scrollToContact()">Ca m'intéresse !</button>
+        <button class="scroller scrollTo" dest="#contact">Ca m'intéresse !</button>
     </div>
+</div>
+<div class="wrapper services mobile">
+    <h3>Services</h3>
+    <div class="service-item active">
+        <figure>
+            <img src="img/spotlight.svg" alt="spotlight" />
+        </figure>
+        <h4>Site vitrine</h4>
+    </div>
+    <div class="service-item">
+        <figure>
+            <img src="img/ecommerce.svg" alt="cart" />
+        </figure>
+        <h4>Site e-commerce</h4>
+    </div>
+    <div class="service-item">
+        <figure>
+            <img src="img/blog.svg" alt="typewritter" />
+        </figure>
+        <h4>Blog</h4>
+    </div>
+    <div class="service-item">
+        <figure>
+            <img src="img/webapp.svg" alt="angular / react" />
+        </figure>
+        <h4>Application web</h4>
+    </div>
+    <div class="service-item">
+        <figure>
+            <img src="img/native.svg" alt="laptop and tablet" />
+        </figure>
+        <h4>Application native</h4>
+    </div>
+    <div class="service-description">
+        <p>Soyez vu sur internet avec un site vitrine.<br>Mettez en avant votre marque, vos produits ou vos services !</p>
+        <button class="scroller scrollTo" dest="#contact" message="Bonjour Pierre,__Je serais intéressé(e) par la création d\'un site vitrine.__Merci de me recontacter !_Cordialement">Ca m'intéresse !</button>
+    </div>
+    <span class="previous"></span>
+    <span class="next"></span>
 </div>
 <div class="services-background"></div>
     </section>
@@ -193,7 +231,7 @@
             canapé avec
             <a href="https://www.instagram.com/_ginger.pops_/" target="blank" title="Clarice">ma chère et tendre</a> (et le chien... et le chat..).</p>
     </span>
-    <div class="scroller" onclick="scrollToContact()">
+    <div class="scroller scrollTo" dest="#contact">
         <span>Me contacter</span>
         <span class="arrow"></span>
     </div>
@@ -268,13 +306,13 @@
     </div>
     <div class="nav__menu">
         <ul>
-            <li class="active">Accueil</li>
-            <li>Services</li>
-            <li>Profil</li>
-            <li>Contact</li>
+            <li dest="#" class="scrollTo active">Accueil</li>
+            <li dest="#services" class="scrollTo">Services</li>
+            <li dest="#profile" class="scrollTo">Profil</li>
+            <li dest="#contact" class="scrollTo">Contact</li>
         </ul>
     </div>
-    <div class="nav__logo">
+    <div class="nav__logo scrollTo" dest="#">
 <svg version="1.1" id="logo" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 60 60" style="enable-background:new 0 0 60 60;" xml:space="preserve">
 <g>
@@ -309,6 +347,7 @@
     </div>
 </nav>
 
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 <script src="js/global.min.js"></script>
 <script defer src="https://use.fontawesome.com/releases/v5.0.10/js/brands.js" integrity="sha384-6jhVhr5a+Z1nLr9h+fd7ocMEo847wnGFelCHddaOOACUeZNoQwFXTxh4ysXVam8u" crossorigin="anonymous"></script>
 <script defer src="https://use.fontawesome.com/releases/v5.0.10/js/fontawesome.js" integrity="sha384-M2FSA4xMm1G9m4CNXM49UcDHeWcDZNucAlz1WVHxohug0Uw1K+IpUhp/Wjg0y6qG" crossorigin="anonymous"></script>

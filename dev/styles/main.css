@@ -183,17 +183,6 @@ header, section {
     color: #1a1a1a;
 }
 
-header h1 {
-    font-size: 48px;
-    letter-spacing: 2px;
-    position: absolute;
-    bottom: 30px;
-    left: 75px;
-    margin: 0;
-    transform-origin: bottom left;
-    transform: rotate(-90deg);
-}
-
 header .hero {
     display: grid;
     height: 100%;
@@ -201,7 +190,16 @@ header .hero {
     align-content: center;
     transform: translateY(-64px);
 }
-
+header .hero h1 {
+    font-size: 48px;
+    letter-spacing: 2px;
+    position: absolute;
+    bottom: -34px;
+    left: 75px;
+    margin: 0;
+    transform-origin: bottom left;
+    transform: rotate(-90deg);
+}
 header .hero h2 {
     font-size: 48px;
     margin: 32px;
@@ -284,6 +282,23 @@ header .mouse::after {
     }
     100% {
         transform: translateY(10px) scale(0.5);
+        opacity: 0;
+    }
+}
+
+@keyframes swipe {
+    0% {
+        transform: translateY(0px);
+        opacity: 0;
+    }
+    50% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+    75% {
+    }
+    100% {
+        transform: translateY(-10px) scale(0.5);
         opacity: 0;
     }
 }
@@ -416,6 +431,10 @@ section .wrapper {
     align-content: center;
     margin: auto;
     z-index: 2;
+}
+
+section .wrapper.mobile {
+    display: none;
 }
 
 .services .service-item {
@@ -684,18 +703,21 @@ nav.dark .nav__hamburger span::before, nav.dark .nav__hamburger span::after {
 nav.light .nav__hamburger span::before, nav.light .nav__hamburger span::after {
     background-color: #1a1a1a;
 }
-
+nav .nav__logo {
+    cursor: pointer;
+    text-align: center;
+    grid-column: 3;
+}
 nav .nav__hamburger, nav .nav__logo {
     width: 60px;
 }
 nav .nav__hamburger {
     display: grid;
-    justify-content: start;
+    justify-content: center;
     align-items: center;
 }
 nav .nav__hamburger span {
     position: relative;
-    display: block;
     margin: auto;
     height: 24px;
     width: 24px;
@@ -776,9 +798,6 @@ nav.light .nav__logo svg .st0{fill:url(#SVGID_1_);}
 .st2{fill:url(#SVGID_3_);}
 .st3{fill:url(#SVGID_4_);}
 .st4{fill:url(#SVGID_5_);}
-
-
-
 
 
 
@@ -863,13 +882,176 @@ nav.light .nav__logo svg .st0{fill:url(#SVGID_1_);}
    ========================================================================== */
 
 @media only screen and (max-width: 1024px) {
-
+    section {
+        padding: 64px 0;
+    }
+    section .wrapper {
+        padding: 0 48px;
+    }
+    .services .service-item {
+        min-width: 100%;
+    }
+    .services .service-description {
+        padding-bottom: 0;
+    }
 }
 @media only screen and (max-width: 768px) {
-
+    .services .service-item:nth-child(-n + 3) {
+        grid-row: 1;
+    }
+    .services .service-item:nth-child(n + 4) {
+        grid-row: 2;
+    }
+    .services .service-description {
+        grid-row: 3;
+        grid-column: span 3;
+    }
+    .profile .social-links li {
+        margin: auto 24px;
+    }
+    .profile .description {
+        width: auto;
+    }
+    footer {
+        grid-template-columns: 33.333% 33.333% 33.333%;
+    }
+    footer .email, footer .mail, footer .phone {
+        grid-row: 2;
+    }
+    footer .social-links {
+        grid-row: 1;
+        grid-column: span 3;
+        padding-bottom: 48px;
+        text-align: center;
+    }
+    footer .social-links li {
+        margin: auto 24px;
+        font-size: 24px;
+    }
 }
 @media only screen and (max-width: 425px) {
-
+    header .hero h1 {
+        position: relative;
+        bottom: auto;
+        left: auto;
+        transform: none;
+        text-align: center;
+    }
+    header .hero h2 {
+        font-size: 32px;
+        letter-spacing: 4px;
+        text-align: center;
+        margin-top: 0;
+        margin-left: 0;
+        margin-right: 0;
+        margin-bottom: 100px;
+    }
+    header .mouse {
+        border-radius: 4px;
+    }
+    header .mouse::before {
+        content: '';
+        display: block;
+        position: absolute;
+        width: 6px;
+        height: 2px;
+        background-color: #fff;
+        left: calc(50% - 3px);
+        bottom: 4px;
+    }
+    header .mouse::after {
+        top: 18px;
+        animation-name: swipe;
+        animation-timing-function: ease-out;
+    }
+    section .wrapper {
+        padding: 0 24px;
+    }
+    section .wrapper.no-mobile {
+        display: none;
+    }
+    section .wrapper.mobile {
+        display: block;
+    }
+    .services h3 {
+        font-size: 48px;
+        font-weight: 700;
+        margin: 0;
+        margin-bottom: 8px;
+    }
+    .services .service-item {
+        display: none;
+        width: 100%;
+        min-height: 178px;
+        height: auto;
+        text-align: center;
+        align-content: center;
+        margin-top: 58px;
+    }
+    .services .service-item.active, .services .service-item:hover {
+        display: grid;
+        background-color: transparent;
+        box-shadow: none;
+    }
+    .services span {
+        display: block;
+        position: absolute;
+        height: 178px;
+        width: 48px;
+        top: 190px;
+    }
+    .services span.previous {
+        left: 0;
+    }
+    .services span.previous::before {
+        content: '';
+        position: absolute;
+        display: block;
+        background-color: #DDB852;
+        width: 2px;
+        height: 24px;
+        top: 71px;
+        left: 23px;
+        transform: rotate(45deg);
+    }
+    .services span.previous::after {}
+    .services span.next {
+        right: 0;
+    }
+    .services span.next::before {}
+    .services span.next::after {}
+    .services-background {
+        display: none;
+    }
+    nav .nav__hamburger span {
+        display: block;
+    }
+    nav .nav__menu {
+        position: fixed;
+        top: 64px;
+        left: -100%;
+        pointer-events: none;
+        background-color: inherit;
+        width: 100%;
+        height: calc(100% - 64px);
+        display: grid;
+        align-content: center;
+        justify-content: center;
+        transition: all 0.3s ease;
+    }
+    nav .nav__menu.active {
+        pointer-events: all;
+        left: 0;
+    }
+    nav .nav__menu ul {
+        height: auto;
+    }
+    nav .nav__menu ul li {
+        display: block;
+        margin: 24px auto;
+        padding: 16px;
+        font-size: 24px;
+    }
 }
 @media only screen and (max-width: 375px) {
 
