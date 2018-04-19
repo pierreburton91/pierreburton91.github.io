@@ -3,6 +3,9 @@ var nav = document.querySelector('nav'),
     sections = document.querySelectorAll('header, section'),
     servicesBg = document.querySelector('.services-background'),
     services = document.querySelectorAll('.service-item'),
+    previous = document.querySelector('.previous'),
+    next = document.querySelector('.next'),
+    i = 5;
     serviceDesc = [
         {description: 'Soyez vu sur internet avec un site vitrine.<br>Mettez en avant votre marque, vos produits ou vos services !', subject: 'un site vitrine'},
         {description: 'Vendez vos produits sur internet et augmentez votre visibilité et vos revenus grâce à un site e-commerce.<br>Ce dernier sera fait sur mesure pour votre business.', subject: 'un site e-commerce'},
@@ -15,7 +18,7 @@ var nav = document.querySelector('nav'),
         {description: 'Donnez vie à votre projet grâce aux technologies qu\'offre le web.<br>C\'est un moyen rapide et facile pour atteindre votre cible.' , subject: 'une application web'},
         {description: 'Profitez de la puissance et des fonctionnalités qu\'offrent les périphériques en créant votre application native<br>pour ordinateurs ou dispositifs mobiles.', subject: 'une application native'}
     ],
-    serviceDescContainer = document.querySelector('.service-description'),
+    serviceDescContainer = document.querySelectorAll('.service-description'),
     textarea = document.querySelector('textarea');
 
 document.addEventListener('scroll', function() {
@@ -63,7 +66,7 @@ services.forEach(function(elem, index) {
             servicesBg.style.animationFillMode = 'forwards';
             servicesBg.style.animationTimingFunction = 'ease';
 
-            updateServiceDesc(description, message);
+            updateServiceDesc(description, message, 0);
         });
         elem.addEventListener('mouseleave', function() {
             servicesBg.style.animationName = '';
@@ -73,9 +76,45 @@ services.forEach(function(elem, index) {
         });
 });
 
-function updateServiceDesc(desc, message) {
-    var descToUpdate = serviceDescContainer.querySelector('p'),
-        buttonToUpdate = serviceDescContainer.querySelector('button');
+next.addEventListener('click', function() {
+    console.log("before: "+i, "service losing class: " +services[i].querySelector('h4').innerHTML);
+    services[i].classList.remove('active');
+    i++;
+    console.log("after: "+i, "service getting class: " +services[i].querySelector('h4').innerHTML);
+    services[i].classList.add('active');
+
+    var service = serviceDesc[i],
+        description = service.description,
+        message = "Bonjour Pierre,__Je serais intéressé(e) par la création d\'"+service.subject+".__Merci de me recontacter !_Cordialement";
+    updateServiceDesc(description, message, 1);
+    if (i > 5) {
+        previous.style.display = "block";
+    }
+    if (i == 9) {
+        next.style.display = "none";
+    }
+});
+previous.addEventListener('click', function() {
+    services[i].classList.remove('active');
+    i--;
+    services[i].classList.add('active');
+
+    var service = serviceDesc[i],
+        description = service.description,
+        message = "Bonjour Pierre,__Je serais intéressé(e) par la création d\'"+service.subject+".__Merci de me recontacter !_Cordialement";
+    updateServiceDesc(description, message, 1);
+    if (i > 5) {
+        next.style.display = "block";
+    }
+    if (i == 5) {
+        previous.style.display = "none";
+    }
+});
+
+function updateServiceDesc(desc, message, isMobile) {
+    console.log(desc, message);
+    var descToUpdate = serviceDescContainer[isMobile].querySelector('p'),
+        buttonToUpdate = serviceDescContainer[isMobile].querySelector('button');
     
     descToUpdate.innerHTML = desc;
     buttonToUpdate.setAttribute('message', ''+message+'');
@@ -99,6 +138,19 @@ $(document).ready(function(){
             }
             $('html, body').animate( { scrollTop: $(page).offset().top }, speed );
         }
+        $('.nav__hamburger, .nav__menu').removeClass('active');
         return false;
+    });
+
+    $('.nav__hamburger').click(function() {
+        if ($(window).scrollTop() == 0) {
+            $('nav').toggleClass('scrolled');
+        }
+        $(this).toggleClass('active');
+        if ($('.nav__menu').hasClass('active')) {
+            $('.nav__menu').removeClass('active');
+        } else {
+            $('.nav__menu').addClass('active');
+        }
     });
 });
