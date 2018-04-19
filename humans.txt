@@ -7,5 +7,5 @@
 
 # TECHNOLOGY COLOPHON
 
-    CSS3, HTML5
-    Node.js, Apache Server Configs, jQuery, Modernizr, Normalize.css
+    CSS3, HTML5, Javascript, jQuery
+    Node.js, Apache Server Configs, Gulp, Modernizr, Normalize.css
