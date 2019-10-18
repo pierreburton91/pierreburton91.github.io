@@ -31,12 +31,12 @@
   "dependencies": {
     "browser-sync": "^2.23.6",
     "critical": "^1.2.2",
-    "gulp": "^3.9.1",
-    "gulp-autoprefixer": "^5.0.0",
-    "gulp-clean-css": "^3.9.3",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^7.0.1",
+    "gulp-clean-css": "^4.2.0",
     "gulp-concat": "^2.6.1",
     "gulp-html-extend": "^1.1.6",
-    "gulp-imagemin": "^4.1.0",
+    "gulp-imagemin": "^6.1.1",
     "gulp-rename": "^1.2.2",
     "gulp-uglify": "^3.0.0"
   }
