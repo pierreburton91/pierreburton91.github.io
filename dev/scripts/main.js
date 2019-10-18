@@ -77,10 +77,8 @@ services.forEach(function(elem, index) {
 });
 
 next.addEventListener('click', function() {
-    console.log("before: "+i, "service losing class: " +services[i].querySelector('h4').innerHTML);
     services[i].classList.remove('active');
     i++;
-    console.log("after: "+i, "service getting class: " +services[i].querySelector('h4').innerHTML);
     services[i].classList.add('active');
 
     var service = serviceDesc[i],
@@ -112,7 +110,6 @@ previous.addEventListener('click', function() {
 });
 
 function updateServiceDesc(desc, message, isMobile) {
-    console.log(desc, message);
     var descToUpdate = serviceDescContainer[isMobile].querySelector('p'),
         buttonToUpdate = serviceDescContainer[isMobile].querySelector('button');
     
