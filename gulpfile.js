@@ -64,10 +64,10 @@ gulp.task('html', function() {
 
 
 gulp.task('watch', function () {
-    gulp.watch('dev/styles/*.css', ['css']);
-    gulp.watch('dev/scripts/*.js', ['js']);
-    gulp.watch('dev/html/*.html', ['html']);
-    gulp.watch('dev/images/*.{png,jpg,jpeg,gif,svg}', ['img']);
+    gulp.watch('dev/styles/*.css', gulp.task('css'));
+    gulp.watch('dev/scripts/*.js', gulp.task('js'));
+    gulp.watch('dev/html/*.html', gulp.task('html'));
+    gulp.watch('dev/images/*.{png,jpg,jpeg,gif,svg}', gulp.task('img'));
  });
 
 // Static server
