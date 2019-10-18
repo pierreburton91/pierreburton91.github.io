@@ -46,7 +46,7 @@ gulp.task('html', function() {
         annotations: false,
         verbose: false
       })) // default options
-      .pipe(gulp.dest(''))
+      .pipe(gulp.dest('./'))
       .pipe(browserSync.reload({stream:true}));
 });
 
@@ -77,5 +77,5 @@ gulp.task('browser-sync', function() {
     });
 });
 
-gulp.task('start', ['browser-sync', 'watch']);
-gulp.task('build', ['css', 'js', 'img', 'html', 'start']);
+gulp.task('start', gulp.parallel('browser-sync', 'watch'));
+gulp.task('build', gulp.parallel('css', 'js', 'img', 'html'));
