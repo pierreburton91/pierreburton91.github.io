@@ -29,7 +29,7 @@
   },
   "homepage": "https://github.com/pierreburton91/pierreburton91.github.io#readme",
   "dependencies": {
-    "browser-sync": "^2.23.6",
+    "browser-sync": "^2.27.10",
     "critical": "^1.2.2",
     "gulp": "^4.0.2",
     "gulp-autoprefixer": "^7.0.1",
